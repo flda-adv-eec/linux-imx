@@ -277,7 +277,10 @@ static const struct spi_device_id m25p_ids[] = {
 	 * hack around the fact that the SPI core does not provide uevent
 	 * matching for .of_match_table
 	 */
-	{"spi-nor"},
+#ifdef CONFIG_ARCH_ADVANTECH
+	{"n25qba16"}, {"n25qbb16"}, {"mx25u3235f"}, {"w25q32"},
+#endif
+        {"spi-nor"},
 
 	/*
 	 * Entries not used in DTs that should be safe to drop after replacing
