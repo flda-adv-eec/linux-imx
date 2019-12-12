@@ -25,11 +25,11 @@
 #define ROMDB7503
 #define SDHC_LOW_SPEED_ONLY
 
-#define PCIE_SLOT
+#undef PCIE_SLOT
 #	undef PCIE_EPDEV_ON
-#define M2_PCIE
-#	define M2_EPDEV_ON
-#define SATA
+#undef M2_PCIE
+#	undef M2_EPDEV_ON
+#undef SATA
 
 #define FLEXSPI0_QSPI0A
 #undef FLEXSPI0_QSPI1A
